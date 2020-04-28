@@ -1,0 +1,82 @@
+body{
+    background-color: thistle !important;
+}
+#mainPage{
+    background-color: thistle !important;
+    border-style: solid;
+    border: 2px solid #8f0d56 !important;
+    border-radius: 40px !important;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    max-width: 800px !important;
+}
+
+.navbar {
+    background-color: thistle !important;
+    border: none;
+  }
+  button {
+    display:block;
+  }
+  
+#timer{
+    float: right;
+    padding-right: 30px; 
+}
+  .nav-titles:hover {
+    font-size: large;
+    font-family: "fantasy, Tangerine", sans-serif;
+    /* text-align: center; */
+    color: #660033 !important;
+    border-bottom: 2px solid thistle;
+    border-style: groove;
+    background-color: #ffc107;
+    border: 0px;
+  }
+  .nav-titles {
+    color: thistle !important;
+    border-right: 1px solid thistle;
+    line-height: 5px;
+  }
+
+  #start-button:hover {
+    background-color :#8f0d56 ;
+    color: white !important;
+}
+
+#start-button {
+    justify-content: space-around;
+    margin-top: 100px;
+    max-width: 300px;
+    min-width: 150px;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+  .btn-outline-primary:hover {
+    background-color: #8f0d56 !important;
+    color: #ffc107;
+}
+
+.btn:hover {
+    border-color: #8f0d56 !important;
+    background-color: #8f0d56;
+    color: #fff !important;
+    
+}
+
+.sidebarBtn{
+  border-color: #fff !important;
+  border-radius: 40px;
+  background-color: transparent;
+  color: #ffc107 !important; 
+}
+.btn, #start-button{
+  border-color: #8f0d56;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #076aff;
+  font-weight: bolder;
+}

@@ -1,2 +1,2 @@
-# CodingQuiz
-This application allows you to test your programming knowledge.
+# CodeQuiz
+A quiz application that test your knowledge of programming.
