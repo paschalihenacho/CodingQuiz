@@ -1,7 +1,7 @@
 body{
     background-color: thistle !important;
 }
-#mainPage{
+.container{
     background-color: thistle !important;
     border-style: solid;
     border: 2px solid #8f0d56 !important;
@@ -39,8 +39,11 @@ body{
     border-right: 1px solid thistle;
     line-height: 5px;
   }
-
-  #start-button:hover {
+  .inputbtn:hover{
+    background-color :#8f0d56 ;
+    color: white !important;
+  }
+   #start-button:hover {
     background-color :#8f0d56 ;
     color: white !important;
 }
@@ -60,20 +63,24 @@ body{
     color: #ffc107;
 }
 
+input:hover{
+  border-color: #8f0d56 !important;
+  background-color: #8f0d56;
+  color: #fff !important;
+}
 .btn:hover {
     border-color: #8f0d56 !important;
     background-color: #8f0d56;
     color: #fff !important;
     
 }
-
 .sidebarBtn{
   border-color: #fff !important;
   border-radius: 40px;
   background-color: transparent;
   color: #ffc107 !important; 
 }
-.btn, #start-button{
+.btn, #start-button, input {
   border-color: #8f0d56;
   border-radius: 10px;
   background-color: transparent;
