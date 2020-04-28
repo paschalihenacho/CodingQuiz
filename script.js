@@ -1,7 +1,7 @@
 let welcomePage = document.getElementById("mainPage")
 
 // a variable for start time
-let secondsLeft = 76;
+let secondsLeft = 100;
 
 //the element that displays the time
 let timer = document.getElementById("timer");
@@ -18,6 +18,7 @@ let viewScoresBtn = document.getElementById("view-scores")
 let startButton = document.getElementById("start-button");
 startButton.addEventListener("click", setTime);
 
+let messages = document.getElementById("#instructions")
 
 // variable for the questions title
 var questionDiv = document.getElementById("question-div");
@@ -63,6 +64,7 @@ function setTime() {
 //FUNCTION
 //function to load the questions on the page
 function displayQuestions() {
+  
   removeEls(startButton);
 
   if (questionCount < questions.length) {
@@ -91,6 +93,7 @@ function displayQuestions() {
           questionCount++;
           displayQuestions();
         }
+
       });
       choices.append(el);
     }
@@ -193,5 +196,5 @@ function goBackBtn() {
   buttonsDiv.append(backBtn)
 }
 
-
+removeEls(messages);
 viewScores();
