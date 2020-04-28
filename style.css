@@ -63,7 +63,18 @@ body{
     color: #ffc107;
 }
 
-input:hover{
+hr {
+  background-color: #660033;
+}
+
+button{
+padding: 5px;
+margin: 10px;
+min-width: 200px;
+text-align: left;
+}
+
+button:hover{
   border-color: #8f0d56 !important;
   background-color: #8f0d56;
   color: #fff !important;
@@ -80,7 +91,7 @@ input:hover{
   background-color: transparent;
   color: #ffc107 !important; 
 }
-.btn, #start-button, input {
+.btn, #start-button, input, button {
   border-color: #8f0d56;
   border-radius: 10px;
   background-color: transparent;
