@@ -1,31 +1,89 @@
 var questions = [
     {
-      title: "Commonly used Data Types do NOT Include:",
-      multiChoice: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
-      answer: "Answer 1a"
+      title: "Is JavaScript a case-sensitive language?",
+      multiChoice: ["A. True", "B. False"],
+      answer: "A. True"
     },
   
     {
-      title: "Second Question?",
-      multiChoice: ["Answer 2a", "Answer 2b", "Answer 2c", "Answer 2d"],
-      answer: "Answer 2b"
+      title: " How can you create an Array in JavaScript??",
+      multiChoice: ["A. var x = [];", "B. var y = {}", "C. var y = [1, 2, 3, 4, 5];", "D. A & C"],
+      answer: "D. A & C"
     },
   
     {
-      title: "Third Question?",
-      multiChoice: ["Answer 3a", "Answer 3b", "Answer 3c", "Answer 3d"],
-      answer: "Answer 3c"
+      title: "Can you assign an anonymous function to a variable and pass it as an argument to another function?",
+      multiChoice: ["A. True", "B. False"],
+      answer: "A. True"
     },
   
     {
-      title: "Fourth Question?",
-      multiChoice: ["Answer 4a", "Answer 4b", "Answer 4c", "Answer 4d"],
-      answer: "Answer 4d"
+      title: "What is the purpose of ‘This’ operator in JavaScript?",
+      multiChoice: ["A. The JavaScript this keyword refers to the class it belongs to.", 
+                    "B. 'This' keyword does not exist in JavaScript", "C. None of the above", 
+                    "D.The JavaScript this keyword refers to the object it belongs to."],
+      answer: "D. The JavaScript this keyword refers to the object it belongs to."
     },
   
     {
-      title: "Fifth Question?",
-      multiChoice: ["Answer 5a", "Answer 5b", "Answer 5c", "Answer 5d","Answer 5e"],
-      answer: "Answer 5d"
+      title: "What is Callback?",
+      multiChoice: ["A. A callback is a plain JavaScript function passed to some method as an argument or option.",
+                    "B. It is a function that is to be executed after another function has finished executing", 
+                    "C. All of the above",],
+      answer: "C. All of the above"
+    },
+    {
+      title: "CharAt() returns the character at the specified index.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "Concat() joins two or more strings.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "forEach() calls a function for each element in the array.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "indexOf() returns the index within the calling String object of the first occurrence of the specified value.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "length() It returns the length of the string.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "pop() removes the last element from an array and returns that element.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "push() adds one or more elements to the end of an array and returns the new length of the array.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "reverse() reverses the order of the elements of an array.",
+      multiChoice: ["A. True",
+                    "B. False"],
+      answer: "A. True"
+    },
+    {
+      title: "In how many ways a JavaScript code can be involved in an HTML file?",
+      multiChoice: ["A. Inline", "B. Internal", "C. External", "D. All of the above", "E. None of the above"],
+      answer: "D. All of the above"
     }
+
   ];

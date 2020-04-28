@@ -1,26 +1,35 @@
 body{
 
-background-image: rgb(241, 206, 160) ;
+  background-image: linear-gradient(to right, #b55c8e,#e6a8ca ,thistle);
 }
 .container{
-    background-color: thistle !important;
+    background-color: #e6a8ca !important;
     border-style: solid;
     border: 2px solid #8f0d56 !important;
     border-radius: 40px !important;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
     padding-bottom: 40px;
     max-width: 800px !important;
 }
 
 .navbar {
-    background-color: rgb(241, 206, 160) !important;
+  background-image: linear-gradient(to left, #b55c8e, #e6a8ca,thistle) !important;
     border: none;
     width: 100%;
     padding-bottom: 0px;
     padding-top: 0px;
     opacity: 0.3px;
+    align-items: stretch;
   }
+
+  h1 {
+    font-size: 30px;
+    font-family: "fantasy";
+    font-weight: bolder;
+} 
+
   button {
     display:block;
   }
@@ -71,7 +80,9 @@ background-image: rgb(241, 206, 160) ;
 hr {
   background-color: #660033;
 }
-
+#view-scores{
+  width: auto !important;
+}
 button{
 padding: 5px;
 margin: 10px;

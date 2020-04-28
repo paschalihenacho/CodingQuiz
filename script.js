@@ -105,7 +105,7 @@ function captureUserScore() {
   let initialsInput = document.createElement("input");
   let postScoreBtn = document.createElement("input");
 
-  results.innerHTML = `You scored ${score} points! Enter initials: `;
+  results.innerHTML = `You scored ${score} points! Enter name: `;
   initialsInput.setAttribute("type", "text");
   postScoreBtn.setAttribute("type", "button");
   postScoreBtn.setAttribute("value", "Post My Score!");
