@@ -13,4 +13,4 @@ Every in correct answers will penalize your time by ten seconds
 4. CSS
 
 # LIVE VIEW:
-https://paschalihenacho.github.io/CodingQuiz/
+. https://paschalihenacho.github.io/CodingQuiz/
