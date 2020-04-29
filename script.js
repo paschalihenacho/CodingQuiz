@@ -204,6 +204,7 @@ function viewScores() {
     removeEls(viewScoresBtn);
     clearScoresBtn();
     goBackBtn();
+    instructions.remove();
   });
 }
 //FUNCTION
@@ -230,5 +231,6 @@ function goBackBtn() {
   buttonsDiv.append(backBtn)
 }
 
-removeEls(messages);
+//removeEls(messages);
+//instructions.remove();
 viewScores();
