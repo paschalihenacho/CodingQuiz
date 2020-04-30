@@ -85,5 +85,4 @@ var questions = [
       multiChoice: ["A. Inline", "B. Internal", "C. External", "D. All of the above", "E. None of the above"],
       answer: "D. All of the above"
     }
-
   ];

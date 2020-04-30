@@ -1,52 +1,24 @@
-// a variable for first page
-let welcomePage = document.getElementById("mainPage")
-
-var correctResponse = document.getElementById("correctResponse");
-var wrongAnswer = document.getElementById('wrongAnswer');
-
-// a variable for start time
-var secondsLeft = 100;
-
-//the element that displays the time
-let timer = document.getElementById("timer");
-
-//div for high scores
-let scoresDiv = document.getElementById("scores-div");
-
+let welcomePage = document.getElementById("mainPage")// a variable for first page
+let correctResponse = document.getElementById("correctResponse");
+let wrongAnswer = document.getElementById('wrongAnswer');
+var secondsLeft = 100;// a variable for start time
+let timer = document.getElementById("timer");//the element that displays the time
+let scoresDiv = document.getElementById("scores-div");//div for high scores
 let buttonsDiv = document.getElementById("buttons")
-
-//button for high scores
-let viewScoresBtn = document.getElementById("view-scores")
-
-//start button div
-let startButton = document.getElementById("start-button");
+let viewScoresBtn = document.getElementById("view-scores")//button for high scores
+let startButton = document.getElementById("start-button");//start button div
 startButton.addEventListener("click", setTime);
-
 let messages = document.getElementById("instructions")
-
-// variable for the questions title
-var questionDiv = document.getElementById("question-div");
-
-// div to hold the results
-let results = document.getElementById("results");
+var questionDiv = document.getElementById("question-div");// variable for the questions title
+let results = document.getElementById("results");// div to hold the results
 let gameOver = document.getElementById("game-over");
-
-// div for the choices
-var choices = document.getElementById("choices");
-
-
-// an array to store high scores
-let emptyArray = [];
-
-// the array of high scores from local storage
-let storedArray = JSON.parse(window.localStorage.getItem("highScores"));
-
-// keeping track of which question we're on
-var questionCount = 0;
-
-//keeping score
-let score = 0
+var choices = document.getElementById("choices");// div for the choices
+let emptyArray = [];// an array to store high scores
+let storedArray = JSON.parse(window.localStorage.getItem("highScores"));// the array of high scores from local storage
+var questionCount = 0;// keeping track of which question we're on
+let score = 0//keeping score
 gameOver.hidden = true;
+
 //Timer starts when the user clicks startButton (see above).
 function setTime() {
   displayQuestions();
