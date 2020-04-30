@@ -140,7 +140,7 @@ const defineScoresArray = (arr1, arr2) => {
 const removeEls = (...els) => {
   for (let el of els) el.remove();
 }
-//FUNCTION
+
 function displayAllScores() {
   removeEls(timer, startButton, results, gameOver);
   let scoresArray = defineScoresArray(storedArray, emptyArray);
@@ -153,7 +153,7 @@ function displayAllScores() {
     scoresDiv.append(resultsP);
   });
 }
-//FUNCTION
+
 function viewScores() {
   viewScoresBtn.addEventListener("click", function(event) {
     event.preventDefault();
@@ -166,7 +166,7 @@ function viewScores() {
     
   });
 }
-//FUNCTION
+
 function clearScoresBtn() {    
   let clearBtn = document.createElement("input");
   clearBtn.setAttribute("type", "button");
@@ -178,7 +178,7 @@ function clearScoresBtn() {
   })
   scoresDiv.append(clearBtn)
 }
-//FUNCTION
+
 function goBackBtn() {
   let backBtn = document.createElement("input");
   backBtn.setAttribute("type", "button");
