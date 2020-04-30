@@ -80,10 +80,15 @@ function displayQuestions() {
       el.innerText = questions[questionCount].multiChoice[i];
       el.setAttribute("data-id", i);
       el.addEventListener("click", function (event) {
+        event.preventDefault();
         event.stopPropagation();
         if (el.innerText === questions[questionCount].answer) {
+          // Display the correct Answer to user
+          console.log(answerResponse.textContent = "Correct!"); 
           score += secondsLeft;
+
         } else {
+          answerResponse.textContent = "Wrong!";
           score -= 10;
           secondsLeft = secondsLeft - 10;
         }
@@ -95,56 +100,33 @@ function displayQuestions() {
         } else {
           questionCount++;
           displayQuestions();
+          
          
         }
+
+
+        
       });
       choices.append(el);
     }
-   
+    
   }
   
 }
 
- // CHECK TO SEE IF ANSWER IS answer
- function checkAnswer(event) {
-  event.preventDefault();
-  gameOver.hidden = false;
-
-  var answer = event.currentTarget.dataset.answer;
-  var answerAnswer = null;
-
-  if (questions[questionCount].answer === answer) {
-      answerAnswer = answer;
-  }
-  if (answer === answerAnswer) {
-  answerResponse.textContent = "answer!"; // If answer, say answer
-  } else {
-  answerResponse.textContent = "Wrong!"; // If wrong, say wrong & deduct 10 points
-      secondsLeft -= 10
-      if (secondsLeft < 0) {
-          secondsLeft = 0;
-      }
-  }
-  if (questions.length === questionCount+1) {
-    captureUserScore(); // If it has gone through all questions, show final score
-    return; // If not, print the next question
-  }
-  questionCount++;
-  displayQuestions();
-}
 
 
 //FUNCTION
 function captureUserScore() {
   timer.remove();
   gameOver.hidden =false;
+  answerResponse.hidden=true;
   choices.textContent = "";
 
   let initialsInput = document.createElement("input");
   let postScoreBtn = document.createElement("input");
 
   gameOver.innerHTML = "Game Over!!!";
-  console.log(gameOver)
 
   results.innerHTML = `You scored ${score} points! Enter name: `;
   initialsInput.setAttribute("type", "text");
