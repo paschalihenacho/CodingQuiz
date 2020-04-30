@@ -20,13 +20,14 @@ let viewScoresBtn = document.getElementById("view-scores")
 let startButton = document.getElementById("start-button");
 startButton.addEventListener("click", setTime);
 
-let messages = document.getElementById("#instructions")
+let messages = document.getElementById("instructions")
 
 // variable for the questions title
 var questionDiv = document.getElementById("question-div");
 
 // div to hold the results
 let results = document.getElementById("results");
+let gameOver = document.getElementById("game-over");
 
 // div for the choices
 var choices = document.getElementById("choices");
@@ -43,7 +44,7 @@ var questionCount = 0;
 
 //keeping score
 let score = 0
-
+gameOver.hidden = true;
 //Timer starts when the user clicks startButton (see above).
 function setTime() {
   displayQuestions();
@@ -56,9 +57,10 @@ function setTime() {
       captureUserScore();
     } 
   }, 1000);
+
+ instructions.remove();
+ 
 }
-
-
 
 
 //FUNCTION
@@ -79,7 +81,6 @@ function displayQuestions() {
       el.setAttribute("data-id", i);
       el.addEventListener("click", function (event) {
         event.stopPropagation();
-
         if (el.innerText === questions[questionCount].answer) {
           score += secondsLeft;
         } else {
@@ -98,16 +99,16 @@ function displayQuestions() {
         }
       });
       choices.append(el);
-      
     }
-    instructions.remove();
+   
   }
+  
 }
-
 
  // CHECK TO SEE IF ANSWER IS answer
  function checkAnswer(event) {
   event.preventDefault();
+  gameOver.hidden = false;
 
   var answer = event.currentTarget.dataset.answer;
   var answerAnswer = null;
@@ -136,16 +137,20 @@ function displayQuestions() {
 //FUNCTION
 function captureUserScore() {
   timer.remove();
-
+  gameOver.hidden =false;
   choices.textContent = "";
 
   let initialsInput = document.createElement("input");
   let postScoreBtn = document.createElement("input");
 
+  gameOver.innerHTML = "Game Over!!!";
+  console.log(gameOver)
+
   results.innerHTML = `You scored ${score} points! Enter name: `;
   initialsInput.setAttribute("type", "text");
   postScoreBtn.setAttribute("type", "button");
   postScoreBtn.setAttribute("value", "Post My Score!");
+
   postScoreBtn.addEventListener("click", function (event) {
     event.preventDefault();
     let scoresArray = defineScoresArray(storedArray, emptyArray);
@@ -184,7 +189,7 @@ const removeEls = (...els) => {
 }
 //FUNCTION
 function displayAllScores() {
-  removeEls(timer, startButton, results);
+  removeEls(timer, startButton, results, gameOver);
   let scoresArray = defineScoresArray(storedArray, emptyArray);
 
   scoresArray.forEach(obj => {
@@ -205,6 +210,7 @@ function viewScores() {
     clearScoresBtn();
     goBackBtn();
     instructions.remove();
+    
   });
 }
 //FUNCTION
@@ -233,4 +239,5 @@ function goBackBtn() {
 
 //removeEls(messages);
 //instructions.remove();
+//game-over.remove();
 viewScores();

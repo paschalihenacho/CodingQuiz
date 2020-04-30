@@ -71,7 +71,12 @@ body{
     text-align: center;
     
 }
-
+#game-over {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #bb0000;
+  margin-bottom: 30px;
+}
   .btn-outline-primary:hover {
     background-color: #8f0d56 !important;
     color: #ffc107;
