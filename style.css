@@ -81,6 +81,14 @@ body{
     background-color: #8f0d56 !important;
     color: #ffc107;
 }
+#correctResponse {
+ 
+  font-size: 40px;
+  font-weight: bolder;
+}
+/* #wrongAnswer {
+  color: red;
+} */
 
 hr {
   background-color: #660033;

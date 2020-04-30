@@ -1,6 +1,8 @@
+// a variable for first page
 let welcomePage = document.getElementById("mainPage")
 
-var answerResponse = document.getElementById("answerResponse");
+var correctResponse = document.getElementById("correctResponse");
+var wrongAnswer = document.getElementById('wrongAnswer');
 
 // a variable for start time
 var secondsLeft = 100;
@@ -62,14 +64,10 @@ function setTime() {
  
 }
 
-
-//FUNCTION
 //function to load the questions on the page
 function displayQuestions() {
 
-
   removeEls(startButton);
-  
 
   if (questionCount < questions.length) {
     questionDiv.innerHTML = questions[questionCount].title;
@@ -84,11 +82,19 @@ function displayQuestions() {
         event.stopPropagation();
         if (el.innerText === questions[questionCount].answer) {
           // Display the correct Answer to user
-          console.log(answerResponse.textContent = "Correct!"); 
+          correctResponse.textContent = "Correct!"
+          // if(answer === answer) {
+          //   correctResponse.attributes('style, color: green')
+          // }else{
+          //   correctResponse.attributes('style, color: red')
+          // }
+          // console.log(correctResponse)
           score += secondsLeft;
-
+    
         } else {
-          answerResponse.textContent = "Wrong!";
+          correctResponse.textContent = "Wrong!";
+          wrongAnswer.textContent = "Wrong!";
+          console.log(wrongAnswer)
           score -= 10;
           secondsLeft = secondsLeft - 10;
         }
@@ -100,12 +106,7 @@ function displayQuestions() {
         } else {
           questionCount++;
           displayQuestions();
-          
-         
         }
-
-
-        
       });
       choices.append(el);
     }
@@ -114,13 +115,11 @@ function displayQuestions() {
   
 }
 
-
-
-//FUNCTION
 function captureUserScore() {
   timer.remove();
   gameOver.hidden =false;
-  answerResponse.hidden=true;
+   correctResponse.hidden=true;
+  // wrongAnswer.hidden=true;
   choices.textContent = "";
 
   let initialsInput = document.createElement("input");
@@ -178,7 +177,7 @@ function displayAllScores() {
     let initials = obj.initials;
     let storedScore = obj.score;
     let resultsP = document.createElement("p");
-    resultsP.innerText = `${initials}: ${storedScore}`;
+    resultsP.innerText= `${initials}: ${storedScore}`;
     scoresDiv.append(resultsP);
   });
 }
@@ -219,7 +218,4 @@ function goBackBtn() {
   buttonsDiv.append(backBtn)
 }
 
-//removeEls(messages);
-//instructions.remove();
-//game-over.remove();
 viewScores();
