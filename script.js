@@ -97,7 +97,7 @@ function captureUserScore() {
   let initialsInput = document.createElement("input");
   let postScoreBtn = document.createElement("input");
 
-  gameOver.innerHTML = "Game Over!!!";
+  gameOver.innerHTML = "Done!!";
 
   results.innerHTML = `You scored ${score} points! Enter name: `;
   initialsInput.setAttribute("type", "text");
