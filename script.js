@@ -149,7 +149,7 @@ function displayAllScores() {
     let initials = obj.initials;
     let storedScore = obj.score;
     let resultsP = document.createElement("p");
-    resultsP.innerText= `${initials}: ${storedScore}`;
+    resultsP.innerText= `${initials} ------------------------------------------- ${storedScore}`;
     scoresDiv.append(resultsP);
   });
 }
